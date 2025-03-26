@@ -1,0 +1,17 @@
+﻿<Window x:Class="Restaurant_DB_Manager.searchRecordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restaurant_DB_Manager"
+        mc:Ignorable="d"
+        Title="searchRecordWindow" Height="510" Width="820">
+    <Grid Width="800" Height="484">
+        <DataGrid Margin="10,10,10,107" Name="grid" IsReadOnly="True">
+        </DataGrid>
+        <Button Margin="662,391,10,61" Content="Назад" Name="back_button" Click="back_button_Click"></Button>
+        <Button Margin="529,391,143,61" Content="Поиск" Name="search_button" Click="search_button_Click"></Button>
+        <TextBox Margin="10,392,276,61" Name="search_txtBox">
+        </TextBox>
+    </Grid>
+</Window>

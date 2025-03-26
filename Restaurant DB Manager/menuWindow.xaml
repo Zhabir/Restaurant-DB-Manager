@@ -1,0 +1,52 @@
+﻿<Window x:Class="Restaurant_DB_Manager.menuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restaurant_DB_Manager"
+        mc:Ignorable="d"
+        Title="menuWindow" Height="500" Width="800">
+    <Grid Height="484" Width="800">
+        <Border Padding="30" VerticalAlignment="Top" Height="40" Background="MediumPurple">
+            <Menu Margin="-30,-20,-30,-8" BorderBrush="#FFF7F6F6" VerticalAlignment="Top" Height="25">
+                <MenuItem Header="Разное" Height="27">
+                    <MenuItem Header="Сменить пароль"  Click="MenuItem_Click_15"/>
+                    <MenuItem Header="Выйти из учетной записи" Click="MenuItem_Click_17"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Таблицы" Height="30">
+                    <MenuItem Header="Подразделения" Click="MenuItem_Click_2"/>
+                    <MenuItem Header="Группы" Click="MenuItem_Click_3"/>
+                    <MenuItem Header="Ингредиенты" Click="MenuItem_Click_4"/>
+                    <MenuItem Header="Ингредиенты в продукции" Click="MenuItem_Click_5"/>
+                    <MenuItem Header="Ингредиенты в заявке" Click="MenuItem_Click_6"/>
+                    <MenuItem Header="Единицы измерения" Click="MenuItem_Click_7"/>
+                    <MenuItem Header="Продукция" Click="MenuItem_Click"/>
+                    <MenuItem Header="Выручка продукции" Click="MenuItem_Click_8"/>
+                    <MenuItem Header="Заявки" Click="MenuItem_Click_9"/>
+                    <MenuItem Header="Выручка" Click="MenuItem_Click_10"/>
+                    <MenuItem Header="Поставки" Click="MenuItem_Click_11"/>
+                    <MenuItem Header="Ингредиентыв поставке" Click="MenuItem_Click_12"/>
+                    <MenuItem Header="Поставщик" Click="MenuItem_Click_14"/>
+                </MenuItem>
+                <MenuItem Header="Справочники" Height="30">
+                    <MenuItem Header="Банк" Click="MenuItem_Click_1"/>
+                    <MenuItem Header="Улица" Click="MenuItem_Click_13"/>
+                </MenuItem>
+                <MenuItem Header="Документы" Height="30">
+                    <MenuItem Header="Инструмент для запросов" Click="MenuItem_Click_16" />
+                    <MenuItem Header="Количество продукции по группам" Click="MenuItem_Click_20"/>
+                    <MenuItem Header="Самые популярные ингредиенты в поставках" Click="MenuItem_Click_21"/>
+                </MenuItem>
+                <MenuItem Header="Справка" Height="28">
+                    <MenuItem Header="Содержание" Click="MenuItem_Click_18"></MenuItem>
+                    <MenuItem Header="О программе" Click="MenuItem_Click_19"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </Border>
+        <DataGrid Width="780" Height="319" Background="Transparent" Margin="10,48,10,118" Name="testGrid" IsReadOnly ="True" />
+        <Button Width="100" Height="30" Content="Добавить" Name ="insert_button" Margin="10,371,690,83" Click="insert_button_Click"/>
+        <Button Width="100" Height="30" Content="Изменить" Name ="update_button" Margin="115,371,585,83" Click="update_button_Click"></Button>
+        <Button Width="100" Height="30" Content="Удалить" Name ="delete_button" Margin="220,371,480,83" Click="delete_button_Click"></Button>
+        <Button Width="100" Height="30" Content="Поиск" x:Name ="seach_button" Margin="325,371,375,83" Click="seach_button_Click"/>
+    </Grid>
+</Window>

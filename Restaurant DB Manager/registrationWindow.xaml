@@ -1,0 +1,29 @@
+﻿<Window x:Class="Restaurant_DB_Manager.registrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restaurant_DB_Manager"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="registrationWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,2" Background="White">
+        <Border MinWidth="400" Margin="1,0,15,0" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="400" Height="257">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Регистрация" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Регистрация" Background="#FF9220B5" FontWeight="Light" Width="115" Click="Button_Click" Margin="231,0,0,0"/>
+                    <Button HorizontalAlignment="Left" Content="Назад" Background="#FF9220B5" FontWeight="Light" Width="88" Click="Button_Click_1"></Button>
+                    <TextBox Margin="0,25,0,-29" Name="txtPassword" Height="24" materialDesign:HintAssist.Hint ="Пароль"/>
+                    <TextBox Margin="0,54,0,-54" Name="txtLogin" materialDesign:HintAssist.Hint="Логин"></TextBox>
+                    <TextBox Margin="0,83,0,-83" Name="txtPassword1" Height="24" materialDesign:HintAssist.Hint="Пароль нового пользователя"/>
+                    <TextBox Margin="0,110,0,-110" Name="txtLogin1"  materialDesign:HintAssist.Hint="Логин нового пользователя"></TextBox>
+                    <Label Margin="0,139,0,-130" Name ="statusLbl" Foreground="Red"></Label>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
