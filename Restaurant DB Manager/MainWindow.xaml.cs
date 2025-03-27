@@ -17,8 +17,9 @@ namespace Restaurant_DB_Manager;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private const string ConnectionStringTemplate = "Host={0};Username={1};Password={2};Database={3}";
-    private readonly string _host = "localhost";
+    private const string ConnectionStringTemplate = "Host={0};Port={1};Username={2};Password={3};Database={4}";
+    private readonly string _host = "192.168.0.10";
+    private readonly string _port = "5432";
     private readonly string _database = "public_catering";
     private string _currentUser = null;
     private NpgsqlConnection _connection = null;
@@ -65,7 +66,7 @@ public partial class MainWindow : Window
     {
         try
         {
-            string connectionString = string.Format(ConnectionStringTemplate, _host, login, password, _database);
+            string connectionString = string.Format(ConnectionStringTemplate, _host, _port, login, password, _database);
             _connection = new NpgsqlConnection(connectionString); 
             _connection.Open(); 
             return true;
